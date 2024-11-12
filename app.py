@@ -24,9 +24,23 @@ def home():
         if response.status_code == 200:
             anime_list = response.json()
             if anime_list:
-                # Get the titles of the animes found
-                titles = [anime['name'] for anime in anime_list]
-                return f"You entered: {anime_name}. Possible titles: {', '.join(titles)}"
+                # Формируем информацию для каждого аниме
+                anime_info_list = []
+                for anime in anime_list:
+                    english_title = anime.get('name', 'N/A')
+                    russian_title = anime.get('russian', 'N/A')
+                    japanese_title = ', '.join(anime.get('japanese', [])) if anime.get('japanese') else 'N/A'
+                    synonyms = ', '.join(anime.get('synonyms', [])) if anime.get('synonyms') else 'N/A'
+                    
+                    anime_info = (
+                        f"English: {english_title}, "
+                        f"Russian: {russian_title}, "
+                        f"Japanese: {japanese_title}, "
+                        f"Other titles: {synonyms}"
+                    )
+                    anime_info_list.append(anime_info)
+
+                return f"You entered: {anime_name}.<br><br>Possible titles:<br>" + "<br>".join(anime_info_list)
             else:
                 return "No anime found for your search. Please try another name."
         else:
