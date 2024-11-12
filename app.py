@@ -10,7 +10,10 @@ def home():
         anime_name = request.form['anime_name']
         # Make a request to Shikimori API to get anime information
         shikimori_url = f"https://shikimori.one/api/animes?search={anime_name}"
-        response = requests.get(shikimori_url)
+        headers = {
+            "User-Agent": "AnimeDownloaderApp/1.0 (contact@example.com)"  # Замените email на ваш или оставьте так
+        }
+        response = requests.get(shikimori_url, headers=headers)
         if response.status_code == 200:
             anime_list = response.json()
             # Get the titles of the animes found
