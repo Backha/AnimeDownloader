@@ -72,17 +72,21 @@ def home():
                 return f"Failed to fetch anime information. Status Code: {response.status_code}"
 
         elif action == "Download":
-            # Поиск торрентов на nyaa.si
+            # Поиск торрентов на nyaa.si через Tor
             nyaa_url = f"https://nyaa.si/?f=0&c=0_0&q={anime_name}&s=seeders&o=desc"
             headers = {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+            }
+            proxies = {
+                'http': 'socks5h://127.0.0.1:9050',
+                'https': 'socks5h://127.0.0.1:9050',
             }
             
             # Пауза перед выполнением запроса
             time.sleep(2)
             
             try:
-                response = requests.get(nyaa_url, headers=headers)
+                response = requests.get(nyaa_url, headers=headers, proxies=proxies)
                 response.raise_for_status()  # This will raise an HTTPError for bad responses
             except requests.exceptions.RequestException as e:
                 return f"Failed to fetch torrent information. Error: {str(e)}"
