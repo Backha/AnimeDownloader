@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template
 import requests
 import qbittorrentapi
+from bs4 import BeautifulSoup
+import time
 
 app = Flask(__name__)
 
@@ -72,20 +74,27 @@ def home():
         elif action == "Download":
             # Поиск торрентов на nyaa.si
             nyaa_url = f"https://nyaa.si/?f=0&c=0_0&q={anime_name}&s=seeders&o=desc"
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+            }
+            
+            # Пауза перед выполнением запроса
+            time.sleep(2)
+            
             try:
-                response = requests.get(nyaa_url)
+                response = requests.get(nyaa_url, headers=headers)
                 response.raise_for_status()  # This will raise an HTTPError for bad responses
             except requests.exceptions.RequestException as e:
                 return f"Failed to fetch torrent information. Error: {str(e)}"
 
-            # Находим магнет-ссылку (в реальном проекте лучше использовать HTML-парсер)
-            if 'magnet:' in response.text:
-                magnet_link = response.text.split('magnet:')[1].split('"')[0]
-                magnet_link = 'magnet:' + magnet_link
-
+            # Парсим HTML и находим магнет-ссылку
+            soup = BeautifulSoup(response.text, 'html.parser')
+            magnet_link = soup.find('a', href=True, text='Magnet')
+            if magnet_link:
+                magnet_url = magnet_link['href']
                 # Добавляем торрент в qBittorrent
                 try:
-                    qb.torrents_add(urls=magnet_link)
+                    qb.torrents_add(urls=magnet_url)
                     return f"Torrent for {anime_name} has been added successfully!"
                 except qbittorrentapi.APIError as e:
                     return f"Failed to add torrent. Error: {str(e)}"
