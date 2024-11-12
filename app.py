@@ -100,11 +100,14 @@ def home():
                         break
 
                 if magnet_url:
+                    # Логирование магнет-ссылки
+                    print(f"Magnet URL from Darklibria: {magnet_url}")
                     # Добавляем торрент в qBittorrent
                     try:
                         qb.torrents_add(urls=magnet_url)
                         return f"Torrent for {anime_name} has been added successfully from Darklibria RSS!"
                     except qbittorrentapi.APIError as e:
+                        print(f"Failed to add torrent from Darklibria RSS. Error: {str(e)}")
                         return f"Failed to add torrent from Darklibria RSS. Error: {str(e)}"
                 else:
                     return f"Failed to fetch torrent information from nyaa.si and no relevant entry found in Darklibria RSS."
@@ -114,11 +117,14 @@ def home():
             magnet_link = soup.find('a', href=True, text='Magnet')
             if magnet_link:
                 magnet_url = magnet_link['href']
+                # Логирование магнет-ссылки
+                print(f"Magnet URL from nyaa.si: {magnet_url}")
                 # Добавляем торрент в qBittorrent
                 try:
                     qb.torrents_add(urls=magnet_url)
                     return f"Torrent for {anime_name} has been added successfully!"
                 except qbittorrentapi.APIError as e:
+                    print(f"Failed to add torrent from nyaa.si. Error: {str(e)}")
                     return f"Failed to add torrent. Error: {str(e)}"
             else:
                 # Если не удалось найти магнет-ссылку на nyaa.si, пробуем использовать RSS Darklibria
@@ -131,11 +137,14 @@ def home():
                         break
 
                 if magnet_url:
+                    # Логирование магнет-ссылки
+                    print(f"Magnet URL from Darklibria: {magnet_url}")
                     # Добавляем торрент в qBittorrent
                     try:
                         qb.torrents_add(urls=magnet_url)
                         return f"Torrent for {anime_name} has been added successfully from Darklibria RSS!"
                     except qbittorrentapi.APIError as e:
+                        print(f"Failed to add torrent from Darklibria RSS. Error: {str(e)}")
                         return f"Failed to add torrent from Darklibria RSS. Error: {str(e)}"
                 else:
                     return "No torrent found for your search in both nyaa.si and Darklibria RSS."
