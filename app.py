@@ -27,18 +27,25 @@ def home():
                 # Формируем информацию для каждого аниме
                 anime_info_list = []
                 for anime in anime_list:
+                    anime_id = anime.get('id')
                     english_title = anime.get('name', 'N/A')
                     russian_title = anime.get('russian', 'N/A')
-                    japanese_title = ', '.join(anime.get('japanese', [])) if anime.get('japanese') else 'N/A'
-                    synonyms = ', '.join(anime.get('synonyms', [])) if anime.get('synonyms') else 'N/A'
-                    
-                    anime_info = (
-                        f"English: {english_title}, "
-                        f"Russian: {russian_title}, "
-                        f"Japanese: {japanese_title}, "
-                        f"Other titles: {synonyms}"
-                    )
-                    anime_info_list.append(anime_info)
+
+                    # Запрос для получения более детальной информации об аниме по ID
+                    detail_url = f"https://shikimori.one/api/animes/{anime_id}"
+                    detail_response = requests.get(detail_url, headers=headers)
+                    if detail_response.status_code == 200:
+                        detail_info = detail_response.json()
+                        japanese_title = detail_info.get('japanese', 'N/A')
+                        synonyms = ', '.join(detail_info.get('synonyms', [])) if 'synonyms' in detail_info else 'N/A'
+
+                        anime_info = (
+                            f"English: {english_title}, "
+                            f"Russian: {russian_title}, "
+                            f"Japanese: {japanese_title}, "
+                            f"Other titles: {synonyms}"
+                        )
+                        anime_info_list.append(anime_info)
 
                 return f"You entered: {anime_name}.<br><br>Possible titles:<br>" + "<br>".join(anime_info_list)
             else:
