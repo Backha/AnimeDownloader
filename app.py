@@ -3,6 +3,7 @@ import requests
 import qbittorrentapi
 from bs4 import BeautifulSoup
 import time
+import feedparser
 
 app = Flask(__name__)
 
@@ -89,7 +90,24 @@ def home():
                 response = requests.get(nyaa_url, headers=headers, proxies=proxies)
                 response.raise_for_status()  # This will raise an HTTPError for bad responses
             except requests.exceptions.RequestException as e:
-                return f"Failed to fetch torrent information. Error: {str(e)}"
+                # Если не удалось получить данные с nyaa.si, пробуем использовать RSS Anilibria
+                anilibria_rss_url = "https://www.anilibria.tv/rss.xml"
+                feed = feedparser.parse(anilibria_rss_url)
+                magnet_url = None
+                for entry in feed.entries:
+                    if anime_name.lower() in entry.title.lower():
+                        magnet_url = entry.link
+                        break
+
+                if magnet_url:
+                    # Добавляем торрент в qBittorrent
+                    try:
+                        qb.torrents_add(urls=magnet_url)
+                        return f"Torrent for {anime_name} has been added successfully from Anilibria RSS!"
+                    except qbittorrentapi.APIError as e:
+                        return f"Failed to add torrent from Anilibria RSS. Error: {str(e)}"
+                else:
+                    return f"Failed to fetch torrent information from nyaa.si and no relevant entry found in Anilibria RSS."
 
             # Парсим HTML и находим магнет-ссылку
             soup = BeautifulSoup(response.text, 'html.parser')
@@ -103,7 +121,24 @@ def home():
                 except qbittorrentapi.APIError as e:
                     return f"Failed to add torrent. Error: {str(e)}"
             else:
-                return "No torrent found for your search."
+                # Если не удалось найти магнет-ссылку на nyaa.si, пробуем использовать RSS Anilibria
+                anilibria_rss_url = "https://www.anilibria.tv/rss.xml"
+                feed = feedparser.parse(anilibria_rss_url)
+                magnet_url = None
+                for entry in feed.entries:
+                    if anime_name.lower() in entry.title.lower():
+                        magnet_url = entry.link
+                        break
+
+                if magnet_url:
+                    # Добавляем торрент в qBittorrent
+                    try:
+                        qb.torrents_add(urls=magnet_url)
+                        return f"Torrent for {anime_name} has been added successfully from Anilibria RSS!"
+                    except qbittorrentapi.APIError as e:
+                        return f"Failed to add torrent from Anilibria RSS. Error: {str(e)}"
+                else:
+                    return "No torrent found for your search in both nyaa.si and Anilibria RSS."
 
     return render_template('home.html')
 
