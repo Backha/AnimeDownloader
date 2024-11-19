@@ -17,23 +17,25 @@ for /d %%D in ("%base_folder%\*AniLibria*") do (
     for %%A in ("%%D\*.mkv") do (
         echo Processing file: %%A >> "%log_file%"
         
-        :: Проверяем, установлена ли вторая дорожка как дефолтная
-        "C:\Program Files\MKVToolNix\mkvinfo.exe" "%%A" | findstr /C:"Track number: 2" /C:"default_track: 1" > nul
-        if !errorlevel! equ 0 (
-            echo File "%%A" already has default tracks set, skipping. >> "%log_file%"
-            echo Skipping file: %%A
-            if "!stop_after_first!" == "true" goto :end
-            goto :continue
-        )
-        
+        :: Извлекаем метаданные дорожек
+        echo Extracting track info for %%A... >> "%log_file%"
+        "C:\Program Files\MKVToolNix\mkvinfo.exe" "%%A" > track_info.txt
+
+        :: Проверяем содержимое track_info.txt для отладки
+        echo ======= TRACK INFO FOR %%A ======= >> "%log_file%"
+        type track_info.txt >> "%log_file%"
+        echo ================================== >> "%log_file%"
+
+        :: Здесь добавим проверку на дефолтную дорожку позже
+
         :: Меняем дефолтные дорожки
+        echo Updating default tracks for %%A... >> "%log_file%"
         "C:\Program Files\MKVToolNix\mkvmerge.exe" -o "%%A" "%%A" ^
         --default-track 1:yes --default-track 3:yes >> "%log_file%" 2>&1
 
         echo File processed successfully: %%A >> "%log_file%"
         echo File processed: %%A
         if "!stop_after_first!" == "true" goto :end
-        :continue
     )
 )
 
