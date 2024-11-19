@@ -8,14 +8,6 @@
 |+ Document type read version: 2
 + Segment: size 443402946
 |+ Seek head (subentries will be skipped)
-|+ EBML void: size 4012
-|+ Segment information
-| + Timestamp scale: 1000000
-| + Multiplexing application: libebml v1.4.5 + libmatroska v1.7.1
-| + Writing application: mkvmerge v88.0 ('All I Know') 64-bit
-| + Duration: 00:24:59.712000000
-| + Date: 2024-11-19 20:06:00 UTC
-| + Segment UID: 0x83 0xed 0xb5 0xb1 0xfa 0xfe 0x6b 0x81 0x44 0xf8 0x8a 0xf1 0x9f 0x86 0xa8 0x3a
 |+ Tracks
 | + Track
 |  + Track number: 1 (track ID for mkvmerge & mkvextract: 0)
@@ -36,7 +28,7 @@
 |  + Track number: 2 (track ID for mkvmerge & mkvextract: 1)
 |  + Track UID: 752210672862847678
 |  + Track type: audio
-|  + "Forced display" flag: 1
+|  + "Forced display" flag: 0
 |  + Language: rus
 |  + Codec ID: A_AAC
 |  + Codec's private data: size 2
@@ -46,6 +38,7 @@
 |  + Audio track
 |   + Sampling frequency: 48000
 |   + Channels: 2
+|  + "Default track" flag: 1
 | + Track
 |  + Track number: 3 (track ID for mkvmerge & mkvextract: 2)
 |  + Track UID: 6569227432333960119
@@ -60,17 +53,19 @@
 |  + Audio track
 |   + Sampling frequency: 48000
 |   + Channels: 2
+|  + "Forced display" flag: 1
 | + Track
 |  + Track number: 4 (track ID for mkvmerge & mkvextract: 3)
 |  + Track UID: 2408247198548403592
 |  + Track type: subtitles
-|  + "Forced display" flag: 1
+|  + "Forced display" flag: 0
 |  + "Lacing" flag: 0
 |  + Language: rus
 |  + Codec ID: S_TEXT/ASS
 |  + Codec's private data: size 1634
 |  + Language (IETF BCP 47): ru
 |  + Name: Надписи
+|  + "Default track" flag: 1
 | + Track
 |  + Track number: 5 (track ID for mkvmerge & mkvextract: 4)
 |  + Track UID: 4070051419648980389
@@ -82,7 +77,16 @@
 |  + Codec's private data: size 1802
 |  + Language (IETF BCP 47): ru
 |  + Name: Субтитры
-|+ EBML void: size 1168
+|  + "Forced display" flag: 1
+|+ EBML void: size 107
+|+ Segment information
+| + Timestamp scale: 1000000
+| + Multiplexing application: libebml v1.4.5 + libmatroska v1.7.1
+| + Writing application: mkvmerge v88.0 ('All I Know') 64-bit
+| + Duration: 00:24:59.712000000
+| + Date: 2024-11-19 19:25:16 UTC
+| + Segment UID: 0x04 0x3c 0x65 0x87 0xb0 0xf8 0x95 0xa2 0x38 0x36 0x53 0x09 0x6a 0xc4 0xa7 0x7e
+|+ EBML void: size 5051
 |+ Attachments
 | + Attached
 |  + File name: AGPmode.ttf
