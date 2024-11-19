@@ -6,20 +6,20 @@
 |+ Document type: matroska
 |+ Document type version: 4
 |+ Document type read version: 2
-+ Segment: size 403118629
++ Segment: size 443402946
 |+ Seek head (subentries will be skipped)
-|+ EBML void: size 4021
+|+ EBML void: size 4012
 |+ Segment information
 | + Timestamp scale: 1000000
 | + Multiplexing application: libebml v1.4.5 + libmatroska v1.7.1
 | + Writing application: mkvmerge v88.0 ('All I Know') 64-bit
-| + Duration: 00:25:00.159000000
-| + Date: 2024-11-19 19:25:18 UTC
-| + Segment UID: 0x53 0x43 0xbe 0xb1 0x1e 0xd0 0x86 0xe7 0x8a 0x5f 0x93 0x0e 0xc6 0xe7 0xea 0x5f
+| + Duration: 00:24:59.712000000
+| + Date: 2024-11-19 20:59:20 UTC
+| + Segment UID: 0x18 0x88 0xae 0x94 0xbb 0x5b 0x90 0x2c 0xc6 0xc4 0x39 0xcd 0x44 0x91 0x87 0x63
 |+ Tracks
 | + Track
 |  + Track number: 1 (track ID for mkvmerge & mkvextract: 0)
-|  + Track UID: 16179652254783114928
+|  + Track UID: 12340126850285557145
 |  + Track type: video
 |  + "Lacing" flag: 0
 |  + Language: und
@@ -34,9 +34,8 @@
 |   + Display height: 720
 | + Track
 |  + Track number: 2 (track ID for mkvmerge & mkvextract: 1)
-|  + Track UID: 11005604716182942647
+|  + Track UID: 752210672862847678
 |  + Track type: audio
-|  + "Forced display" flag: 0
 |  + Language: rus
 |  + Codec ID: A_AAC
 |  + Codec's private data: size 2
@@ -46,12 +45,12 @@
 |  + Audio track
 |   + Sampling frequency: 48000
 |   + Channels: 2
-|  + "Default track" flag: 1
 | + Track
 |  + Track number: 3 (track ID for mkvmerge & mkvextract: 2)
-|  + Track UID: 1653640430817838260
+|  + Track UID: 6569227432333960119
 |  + Track type: audio
 |  + "Default track" flag: 0
+|  + "Forced display" flag: 1
 |  + Language: jpn
 |  + Codec ID: A_AAC
 |  + Codec's private data: size 5
@@ -61,30 +60,58 @@
 |  + Audio track
 |   + Sampling frequency: 48000
 |   + Channels: 2
-|  + "Forced display" flag: 1
 | + Track
 |  + Track number: 4 (track ID for mkvmerge & mkvextract: 3)
-|  + Track UID: 10963768564243119259
+|  + Track UID: 2408247198548403592
 |  + Track type: subtitles
-|  + "Forced display" flag: 0
 |  + "Lacing" flag: 0
 |  + Language: rus
 |  + Codec ID: S_TEXT/ASS
-|  + Codec's private data: size 13891
+|  + Codec's private data: size 1634
 |  + Language (IETF BCP 47): ru
 |  + Name: Надписи
-|  + "Default track" flag: 1
 | + Track
 |  + Track number: 5 (track ID for mkvmerge & mkvextract: 4)
-|  + Track UID: 13611471019855999366
+|  + Track UID: 4070051419648980389
 |  + Track type: subtitles
 |  + "Default track" flag: 0
+|  + "Forced display" flag: 1
 |  + "Lacing" flag: 0
 |  + Language: rus
 |  + Codec ID: S_TEXT/ASS
-|  + Codec's private data: size 13914
+|  + Codec's private data: size 1802
 |  + Language (IETF BCP 47): ru
 |  + Name: Субтитры
-|  + "Forced display" flag: 1
-|+ EBML void: size 1152
+|+ EBML void: size 1168
+|+ Attachments
+| + Attached
+|  + File name: AGPmode.ttf
+|  + MIME type: application/x-truetype-font
+|  + File data: size 66448
+|  + File UID: 6358987439143315090
+| + Attached
+|  + File name: BIPs.ttf
+|  + MIME type: application/x-truetype-font
+|  + File data: size 73508
+|  + File UID: 10668304174701732779
+| + Attached
+|  + File name: DCYoseMoji-W7.ttc
+|  + MIME type: application/x-truetype-font
+|  + File data: size 8500012
+|  + File UID: 136043321187519907
+| + Attached
+|  + File name: flibustiere.ttf
+|  + MIME type: application/x-truetype-font
+|  + File data: size 71448
+|  + File UID: 14430443080970285707
+| + Attached
+|  + File name: RotondaC.otf
+|  + MIME type: application/vnd.ms-opentype
+|  + File data: size 22772
+|  + File UID: 491970801419052444
+| + Attached
+|  + File name: t4j3Ak16.ttf
+|  + MIME type: application/x-truetype-font
+|  + File data: size 159700
+|  + File UID: 10932229900823394463
 |+ Cluster
