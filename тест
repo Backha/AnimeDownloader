@@ -1,1 +1,7 @@
 "C:\Program Files\MKVToolNix\mkvinfo.exe" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" | findstr /C:"Track type: audio" /C:"Track type: subtitles"
+
+C:\Users\Bakhrom>"C:\Program Files\MKVToolNix\mkvinfo.exe" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" | findstr /C:"Track type: audio" /C:"Track type: subtitles"
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
