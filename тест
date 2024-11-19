@@ -8,6 +8,11 @@
 --track-name 3:"Надписи" --default-track 3:no --forced-track 3:no ^
 --track-name 4:"Субтитры" --default-track 4:yes --forced-track 4:no
 
+C:\Users\Bakhrom>"C:\Program Files\MKVToolNix\mkvmerge.exe" -o "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_fixed.mkv" ^
+More? "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" ^
+mkvmerge v88.0 ('All I Know') 64-bit
+Error: The file '^' could not be opened for reading: open file error.
+
 C:\Users\Bakhrom>--track-name 0:Video --default-track 0:no --forced-track 0:no ^
 More? --track-name 1:"Русский аудио" --default-track 1:yes --forced-track 1:no ^
 More? --track-name 2:"Японский аудио" --default-track 2:no --forced-track 2:no ^
@@ -20,3 +25,9 @@ C:\Users\Bakhrom>"C:\Program Files\MKVToolNix\mkvmerge.exe" -o "F:\Anime\3 gatsu
 More? "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" ^
 mkvmerge v88.0 ('All I Know') 64-bit
 Error: The file '^' could not be opened for reading: open file error.
+
+C:\Users\Bakhrom>--track-name 0:Video --default-track 0:no --forced-track 0:no ^
+More? --track-name 1:"Русский аудио" --default-track 1:yes --forced-track 1:no ^
+More? --track-name 2:"Японский аудио" --default-track 2:no --forced-track 2:no ^
+More? --track-name 3:"Надписи" --default-track 3:no --forced-track 3:no ^
+More? --track-name 4:"Субтитры" --default-track 4:yes --forced-track 4:no
