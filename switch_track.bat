@@ -1,46 +1,71 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Укажите базовый путь, где искать папки с "AniLibria"
+:: Путь к MKVToolNix
+set "mkvpropedit_path=C:\Program Files\MKVToolNix\mkvpropedit.exe"
+set "mkvinfo_path=C:\Program Files\MKVToolNix\mkvinfo.exe"
+
+:: Базовая папка с файлами
 set "base_folder=F:\Anime"
 set "log_file=F:\Anime\process_log.txt"
 
-:: Очищаем или создаем файл логов
+:: Очищаем/создаём лог-файл
 echo Script started on %date% at %time% > "%log_file%"
 
-:: Рекурсивно обходим папки с названием, содержащим "AniLibria"
+:: Рекурсивный поиск файлов в папках, содержащих "AniLibria"
 for /d %%D in ("%base_folder%\*AniLibria*") do (
-    echo Checking folder: %%D
     echo Checking folder: %%D >> "%log_file%"
-    for %%A in ("%%D\*.mkv") do (
-        echo Processing file: %%A
-        echo Processing file: %%A >> "%log_file%"
-        
-        :: Меняем дефолтные дорожки
-        "C:\Program Files\MKVToolNix\mkvmerge.exe" -o "%%A.temp" "%%A" ^
-        --default-track 1:no --default-track 2:yes ^
-        --default-track 3:no --default-track 4:yes >> "%log_file%" 2>&1
+    
+    set "audio_count=0"
+    set "subtitle_count=0"
+    set "skip_folder=no"
 
-        if errorlevel 1 (
-            echo Failed to update default tracks for %%A
-            echo Failed to update default tracks for %%A >> "%log_file%"
-            del "%%A.temp" >nul 2>&1
-        ) else (
-            :: Проверяем результат
-            "C:\Program Files\MKVToolNix\mkvinfo.exe" "%%A.temp" | findstr "default_track" >> "%log_file%"
-            
-            if not exist "%%A.temp" (
-                echo File processing failed unexpectedly for %%A
-                echo File processing failed unexpectedly for %%A >> "%log_file%"
-            ) else (
-                del "%%A"
-                move "%%A.temp" "%%A"
-                echo File processed successfully: %%A
-                echo File processed successfully: %%A >> "%log_file%"
-            )
+    :: Проверяем все файлы в папке
+    for %%F in ("%%D\*.mkv") do (
+        echo Analyzing file: %%F >> "%log_file%"
+        
+        "%mkvinfo_path%" "%%F" | findstr /C:"Track type: audio" /C:"Track type: subtitles" > temp_check.txt
+
+        :: Подсчитываем количество треков
+        for /f "tokens=*" %%L in (temp_check.txt) do (
+            if /i "%%L"=="|  + Track type: audio" set /a audio_count+=1
+            if /i "%%L"=="|  + Track type: subtitles" set /a subtitle_count+=1
+        )
+
+        :: Проверка условий
+        if !audio_count! lss 2 (
+            echo Not enough audio tracks in folder %%D. Skipping... >> "%log_file%"
+            set "skip_folder=yes"
+            goto :skip_folder
+        )
+        if !subtitle_count! lss 2 (
+            echo Not enough subtitle tracks in folder %%D. Skipping... >> "%log_file%"
+            set "skip_folder=yes"
+            goto :skip_folder
         )
     )
+
+    :skip_folder
+    if "!skip_folder!"=="yes" (
+        echo Folder skipped: %%D >> "%log_file%"
+        del temp_check.txt
+        goto :next_folder
+    )
+
+    :: Обрабатываем файлы в папке, если все проверки пройдены
+    for %%F in ("%%D\*.mkv") do (
+        echo Processing file: %%F >> "%log_file%"
+        "%mkvpropedit_path%" "%%F" --edit track:2 --set flag-default=1 --set flag-forced=0 --edit track:3 --set flag-default=0 --set flag-forced=1 --edit track:4 --set flag-default=1 --set flag-forced=0 --edit track:5 --set flag-default=0 --set flag-forced=1 >> "%log_file%" 2>&1
+
+        if errorlevel 1 (
+            echo Failed to process file: %%F >> "%log_file%"
+        ) else (
+            echo Successfully processed file: %%F >> "%log_file%"
+        )
+    )
+    :next_folder
 )
 
+:: Завершаем скрипт
 echo Script finished on %date% at %time% >> "%log_file%"
 pause
