@@ -1,188 +1,256 @@
-Script started on 19/11/2024 at 22:16:03.71 
-Checking folder: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p] 
+Script started on 19/11/2024 at 23:32:57.30 
+Searching for folders containing "AniLibria" 
+Found folder: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p] 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 2%
-Progress: 33%
-Progress: 54%
-Progress: 85%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 0%
-Progress: 35%
-Progress: 65%
-Progress: 92%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[02]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 4%
-Progress: 39%
-Progress: 62%
-Progress: 93%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[03]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 4%
-Progress: 27%
-Progress: 59%
-Progress: 92%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[04]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 4%
-Progress: 42%
-Progress: 63%
-Progress: 86%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[05]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 4%
-Progress: 30%
-Progress: 60%
-Progress: 90%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[06]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 5%
-Progress: 39%
-Progress: 54%
-Progress: 81%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[07]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 4%
-Progress: 20%
-Progress: 46%
-Progress: 78%
-Progress: 93%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[08]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 2%
-Progress: 34%
-Progress: 44%
-Progress: 74%
-Progress: 97%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[09]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 4%
-Progress: 35%
-Progress: 60%
-Progress: 81%
-Progress: 100%
-The cue entries (the index) are being written...
-Multiplexing took 2 seconds.
-File processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[10]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
 Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
-mkvmerge v88.0 ('All I Know') 64-bit
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv': Using the demultiplexer for the format 'Matroska'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 0: Using the output module for the format 'AVC/H.264'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 1: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 2: Using the output module for the format 'AAC'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 3: Using the output module for the format 'SSA/ASS text subtitles'.
-'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv' track 4: Using the output module for the format 'SSA/ASS text subtitles'.
-The file 'F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv.temp' has been opened for writing.
-Progress: 4%
-Progress: 21%
-Progress: 56%
-Progress: 81%
-^CFile processed successfully: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[11]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[12]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[12]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[12]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[12]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[13]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[13]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[13]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[13]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[14]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[14]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[14]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[14]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[15]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[15]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[15]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[15]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[16]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[16]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[16]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[16]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[17]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[17]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[17]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[17]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[18]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[18]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[18]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[18]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[19]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[19]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[19]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[19]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[20]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[20]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[20]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[20]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[21]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[21]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[21]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[21]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Processing file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[22]_[END]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[22]_[END]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[22]_[END]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
+Successfully processed file: F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[22]_[END]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Found folder: F:\Anime\3 gatsu no lion 2 - AniLibria.TV [HDTV-Rip 720p] 
+Processing file: F:\Anime\3 gatsu no lion 2 - AniLibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_2_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+Running mkvinfo for F:\Anime\3 gatsu no lion 2 - AniLibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_2_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+|  + Track type: audio
+|  + Track type: audio
+|  + Track type: subtitles
+|  + Track type: subtitles
+Running mkvpropedit for F:\Anime\3 gatsu no lion 2 - AniLibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_2_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv 
+The file is being analyzed.
+The changes are written to the file.
+Done.
