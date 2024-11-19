@@ -6,244 +6,112 @@
 |+ Document type: matroska
 |+ Document type version: 4
 |+ Document type read version: 2
-+ Segment: size 444083955
++ Segment: size 443402946
 |+ Seek head (subentries will be skipped)
-|+ EBML void: size 65
+|+ EBML void: size 4012
 |+ Segment information
 | + Timestamp scale: 1000000
-| + Multiplexing application: Lavf61.7.100
-| + Writing application: Lavf61.7.100
-| + Segment UID: 0x84 0x0f 0x53 0x51 0x36 0xf2 0x85 0x62 0x20 0xa5 0xda 0x93 0xcc 0x7c 0x6b 0x9b
-| + Duration: 00:24:59.711000000
+| + Multiplexing application: libebml v1.4.5 + libmatroska v1.7.1
+| + Writing application: mkvmerge v88.0 ('All I Know') 64-bit
+| + Duration: 00:24:59.712000000
+| + Date: 2024-11-19 20:03:09 UTC
+| + Segment UID: 0xa5 0x46 0xdf 0xa3 0x4b 0xb2 0x58 0xe7 0x89 0xd1 0xc9 0xbd 0xde 0x6b 0x7f 0x26
 |+ Tracks
 | + Track
 |  + Track number: 1 (track ID for mkvmerge & mkvextract: 0)
-|  + Track UID: 8912558068246335723
+|  + Track UID: 12340126850285557145
+|  + Track type: video
 |  + "Lacing" flag: 0
 |  + Language: und
 |  + Codec ID: V_MPEG4/ISO/AVC
-|  + Track type: video
+|  + Codec's private data: size 42 (H.264 profile: Main @L4.1)
 |  + Default duration: 00:00:00.041708333 (23.976 frames/fields per second for a video track)
+|  + Language (IETF BCP 47): und
 |  + Video track
 |   + Pixel width: 1280
 |   + Pixel height: 720
-|   + Interlaced: 2
-|   + Video color information
-|    + Color transfer: 1
-|    + Color matrix coefficients: 1
-|    + Color primaries: 1
-|    + Color range: 1
-|    + Horizontal chroma siting: 1
-|    + Vertical chroma siting: 2
-|  + Maximum block additional ID: 0
-|  + EBML void: size 2
-|  + Codec's private data: size 42 (H.264 profile: Main @L4.1)
+|   + Display width: 1280
+|   + Display height: 720
 | + Track
 |  + Track number: 2 (track ID for mkvmerge & mkvextract: 1)
-|  + Track UID: 8336474510794604828
-|  + "Lacing" flag: 0
-|  + Name: Anzen & LeeAnnushka
-|  + Language: rus
-|  + "Default track" flag: 0
-|  + Codec ID: A_AAC
+|  + Track UID: 752210672862847678
 |  + Track type: audio
-|  + Audio track
-|   + Channels: 2
-|   + Sampling frequency: 48000
-|   + Bit depth: 32
-|  + Maximum block additional ID: 0
+|  + "Forced display" flag: 1
+|  + Language: rus
+|  + Codec ID: A_AAC
 |  + Codec's private data: size 2
+|  + Default duration: 00:00:00.021333333 (46.875 frames/fields per second for a video track)
+|  + Language (IETF BCP 47): ru
+|  + Name: Anzen & LeeAnnushka
+|  + Audio track
+|   + Sampling frequency: 48000
+|   + Channels: 2
 | + Track
 |  + Track number: 3 (track ID for mkvmerge & mkvextract: 2)
-|  + Track UID: 9367671591833399231
-|  + "Lacing" flag: 0
-|  + Name: Original
-|  + Language: jpn
-|  + "Default track" flag: 0
-|  + Codec ID: A_AAC
+|  + Track UID: 6569227432333960119
 |  + Track type: audio
-|  + Audio track
-|   + Channels: 2
-|   + Sampling frequency: 48000
-|   + Bit depth: 32
-|  + Maximum block additional ID: 0
+|  + "Default track" flag: 0
+|  + Language: jpn
+|  + Codec ID: A_AAC
 |  + Codec's private data: size 5
+|  + Default duration: 00:00:00.021333333 (46.875 frames/fields per second for a video track)
+|  + Language (IETF BCP 47): ja
+|  + Name: Original
+|  + Audio track
+|   + Sampling frequency: 48000
+|   + Channels: 2
 | + Track
 |  + Track number: 4 (track ID for mkvmerge & mkvextract: 3)
-|  + Track UID: 5259290501551335500
-|  + "Lacing" flag: 0
-|  + Name: Надписи
-|  + Language: rus
-|  + "Default track" flag: 0
-|  + Codec ID: S_TEXT/ASS
+|  + Track UID: 2408247198548403592
 |  + Track type: subtitles
-|  + Maximum block additional ID: 0
+|  + "Forced display" flag: 1
+|  + "Lacing" flag: 0
+|  + Language: rus
+|  + Codec ID: S_TEXT/ASS
 |  + Codec's private data: size 1634
+|  + Language (IETF BCP 47): ru
+|  + Name: Надписи
 | + Track
 |  + Track number: 5 (track ID for mkvmerge & mkvextract: 4)
-|  + Track UID: 9174015236501913528
+|  + Track UID: 4070051419648980389
+|  + Track type: subtitles
+|  + "Default track" flag: 0
 |  + "Lacing" flag: 0
-|  + Name: Субтитры
 |  + Language: rus
 |  + Codec ID: S_TEXT/ASS
-|  + Track type: subtitles
-|  + Maximum block additional ID: 0
 |  + Codec's private data: size 1802
+|  + Language (IETF BCP 47): ru
+|  + Name: Субтитры
+|+ EBML void: size 1168
 |+ Attachments
 | + Attached
 |  + File name: AGPmode.ttf
 |  + MIME type: application/x-truetype-font
 |  + File data: size 66448
-|  + File UID: 16538145878554695092
+|  + File UID: 6358987439143315090
 | + Attached
 |  + File name: BIPs.ttf
 |  + MIME type: application/x-truetype-font
 |  + File data: size 73508
-|  + File UID: 16223020883799787093
+|  + File UID: 10668304174701732779
 | + Attached
 |  + File name: DCYoseMoji-W7.ttc
 |  + MIME type: application/x-truetype-font
 |  + File data: size 8500012
-|  + File UID: 9091766826948763448
+|  + File UID: 136043321187519907
 | + Attached
 |  + File name: flibustiere.ttf
 |  + MIME type: application/x-truetype-font
 |  + File data: size 71448
-|  + File UID: 14484681314882243934
+|  + File UID: 14430443080970285707
 | + Attached
 |  + File name: RotondaC.otf
 |  + MIME type: application/vnd.ms-opentype
 |  + File data: size 22772
-|  + File UID: 5528266883142766173
+|  + File UID: 491970801419052444
 | + Attached
 |  + File name: t4j3Ak16.ttf
 |  + MIME type: application/x-truetype-font
 |  + File data: size 159700
-|  + File UID: 16800306269709187466
-|+ Tags
-| + Tag
-|  + Targets
-|  + Simple
-|   + Name: ENCODER
-|   + String: Lavf61.7.100
-| + Tag
-|  + Targets
-|   + Track UID: 8912558068246335723
-|  + Simple
-|   + Name: BPS
-|   + String: 1929544
-|  + Simple
-|   + Name: NUMBER_OF_FRAMES
-|   + String: 35955
-|  + Simple
-|   + Name: NUMBER_OF_BYTES
-|   + String: 361698655
-|  + Simple
-|   + Name: _STATISTICS_WRITING_APP
-|   + String: mkvmerge v88.0 ('All I Know') 64-bit
-|  + Simple
-|   + Name: _STATISTICS_WRITING_DATE_UTC
-|   + String: 2024-11-19 19:25:16
-|  + Simple
-|   + Name: _STATISTICS_TAGS
-|   + String: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
-|  + Simple
-|   + Name: DURATION
-|   + String: 00:24:59.622000000
-| + Tag
-|  + Targets
-|   + Track UID: 8336474510794604828
-|  + Simple
-|   + Name: BPS
-|   + String: 192091
-|  + Simple
-|   + Name: NUMBER_OF_FRAMES
-|   + String: 70299
-|  + Simple
-|   + Name: NUMBER_OF_BYTES
-|   + String: 36010195
-|  + Simple
-|   + Name: _STATISTICS_WRITING_APP
-|   + String: mkvmerge v88.0 ('All I Know') 64-bit
-|  + Simple
-|   + Name: _STATISTICS_WRITING_DATE_UTC
-|   + String: 2024-11-19 19:25:16
-|  + Simple
-|   + Name: _STATISTICS_TAGS
-|   + String: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
-|  + Simple
-|   + Name: DURATION
-|   + String: 00:24:59.711000000
-| + Tag
-|  + Targets
-|   + Track UID: 9367671591833399231
-|  + Simple
-|   + Name: BPS
-|   + String: 192868
-|  + Simple
-|   + Name: NUMBER_OF_FRAMES
-|   + String: 70297
-|  + Simple
-|   + Name: NUMBER_OF_BYTES
-|   + String: 36154812
-|  + Simple
-|   + Name: _STATISTICS_WRITING_APP
-|   + String: mkvmerge v88.0 ('All I Know') 64-bit
-|  + Simple
-|   + Name: _STATISTICS_WRITING_DATE_UTC
-|   + String: 2024-11-19 19:25:16
-|  + Simple
-|   + Name: _STATISTICS_TAGS
-|   + String: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
-|  + Simple
-|   + Name: DURATION
-|   + String: 00:24:59.669000000
-| + Tag
-|  + Targets
-|   + Track UID: 5259290501551335500
-|  + Simple
-|   + Name: BPS
-|   + String: 39
-|  + Simple
-|   + Name: NUMBER_OF_FRAMES
-|   + String: 49
-|  + Simple
-|   + Name: NUMBER_OF_BYTES
-|   + String: 7189
-|  + Simple
-|   + Name: _STATISTICS_WRITING_APP
-|   + String: mkvmerge v88.0 ('All I Know') 64-bit
-|  + Simple
-|   + Name: _STATISTICS_WRITING_DATE_UTC
-|   + String: 2024-11-19 19:25:16
-|  + Simple
-|   + Name: _STATISTICS_TAGS
-|   + String: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
-|  + Simple
-|   + Name: DURATION
-|   + String: 00:24:49.920000000
-| + Tag
-|  + Targets
-|   + Track UID: 9174015236501913528
-|  + Simple
-|   + Name: BPS
-|   + String: 147
-|  + Simple
-|   + Name: NUMBER_OF_FRAMES
-|   + String: 282
-|  + Simple
-|   + Name: NUMBER_OF_BYTES
-|   + String: 27085
-|  + Simple
-|   + Name: _STATISTICS_WRITING_APP
-|   + String: mkvmerge v88.0 ('All I Know') 64-bit
-|  + Simple
-|   + Name: _STATISTICS_WRITING_DATE_UTC
-|   + String: 2024-11-19 19:25:16
-|  + Simple
-|   + Name: _STATISTICS_TAGS
-|   + String: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
-|  + Simple
-|   + Name: DURATION
-|   + String: 00:24:56.630000000
+|  + File UID: 10932229900823394463
 |+ Cluster
