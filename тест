@@ -1,7 +1,8 @@
-"C:\Program Files\MKVToolNix\mkvinfo.exe" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_updated.mkv" > F:\Anime\mkvinfo_output.txt
+"C:\Program Files\MKVToolNix\mkvinfo.exe" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_fixed.mkv" > F:\Anime\mkvinfo_output.txt
 
-"C:\Program Files\MKVToolNix\mkvmerge.exe" -o "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_updated.mkv" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" ^
---default-track 2:yes --forced-track 2:no ^
+"C:\Program Files\MKVToolNix\mkvmerge.exe" -o "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_fixed.mkv" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" ^
+--default-track 0:no --forced-track 0:no ^
+--default-track 1:yes --forced-track 1:no ^
+--default-track 2:no --forced-track 2:no ^
 --default-track 3:no --forced-track 3:no ^
---default-track 4:no --forced-track 4:no ^
---default-track 5:yes --forced-track 5:no
+--default-track 4:yes --forced-track 4:no
