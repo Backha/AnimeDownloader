@@ -1,17 +1,7 @@
 "C:\Program Files\MKVToolNix\mkvinfo.exe" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_fixed.mkv" > F:\Anime\mkvinfo_output.txt
 
-"C:\Program Files\MKVToolNix\mkvmerge.exe" -o "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_fixed.mkv" ^
-"F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" ^
---default-track 0:yes --forced-track 0:no ^
---default-track 1:no --forced-track 1:no ^
---default-track 2:yes --forced-track 2:no ^
---default-track 3:no --forced-track 3:no ^
---default-track 4:no --forced-track 4:no
+"C:\Program Files\MKVToolNix\mkvmerge.exe" -o "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_fixed.mkv" "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" --default-track 0:yes --forced-track 0:no --default-track 1:no --forced-track 1:no --default-track 2:yes --forced-track 2:no --default-track 3:no --forced-track 3:no --default-track 4:no --forced-track 4:no
 
-
-C:\Users\Bakhrom>"C:\Program Files\MKVToolNix\mkvmerge.exe" -o "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_fixed.mkv" ^"F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" ^--default-track 0:yes --forced-track 0:no ^--default-track 1:no --forced-track 1:no ^--default-track 2:yes --forced-track 2:no ^--default-track 3:no --forced-track 3:no ^--default-track 4:no --forced-track 4:no
-mkvmerge v88.0 ('All I Know') 64-bit
-Error: The file '^--default-track' could not be opened for reading: open file error.
 
 ffmpeg -i "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_[AniLibria_TV]_[HDTV-Rip_720p].mkv" -map 0 -c copy -disposition:a:0 0 -disposition:a:1 0 -disposition:s:0 0 -disposition:s:1 default "F:\Anime\3 gatsu no lion - Anilibria.TV [HDTV-Rip 720p]\3_gatsu_no_lion_[01]_ffmpeg_fixed.mkv"
 
