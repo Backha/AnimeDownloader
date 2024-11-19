@@ -14,8 +14,8 @@
 | + Multiplexing application: libebml v1.4.5 + libmatroska v1.7.1
 | + Writing application: mkvmerge v88.0 ('All I Know') 64-bit
 | + Duration: 00:24:59.712000000
-| + Date: 2024-11-19 20:59:20 UTC
-| + Segment UID: 0x18 0x88 0xae 0x94 0xbb 0x5b 0x90 0x2c 0xc6 0xc4 0x39 0xcd 0x44 0x91 0x87 0x63
+| + Date: 2024-11-19 21:03:58 UTC
+| + Segment UID: 0x17 0x03 0x70 0xe8 0x16 0x9c 0x07 0x50 0xa4 0x8a 0x00 0x3d 0xd3 0x07 0x87 0x50
 |+ Tracks
 | + Track
 |  + Track number: 1 (track ID for mkvmerge & mkvextract: 0)
@@ -34,19 +34,6 @@
 |   + Display height: 720
 | + Track
 |  + Track number: 2 (track ID for mkvmerge & mkvextract: 1)
-|  + Track UID: 752210672862847678
-|  + Track type: audio
-|  + Language: rus
-|  + Codec ID: A_AAC
-|  + Codec's private data: size 2
-|  + Default duration: 00:00:00.021333333 (46.875 frames/fields per second for a video track)
-|  + Language (IETF BCP 47): ru
-|  + Name: Anzen & LeeAnnushka
-|  + Audio track
-|   + Sampling frequency: 48000
-|   + Channels: 2
-| + Track
-|  + Track number: 3 (track ID for mkvmerge & mkvextract: 2)
 |  + Track UID: 6569227432333960119
 |  + Track type: audio
 |  + "Default track" flag: 0
@@ -61,17 +48,20 @@
 |   + Sampling frequency: 48000
 |   + Channels: 2
 | + Track
-|  + Track number: 4 (track ID for mkvmerge & mkvextract: 3)
-|  + Track UID: 2408247198548403592
-|  + Track type: subtitles
-|  + "Lacing" flag: 0
+|  + Track number: 3 (track ID for mkvmerge & mkvextract: 2)
+|  + Track UID: 752210672862847678
+|  + Track type: audio
 |  + Language: rus
-|  + Codec ID: S_TEXT/ASS
-|  + Codec's private data: size 1634
+|  + Codec ID: A_AAC
+|  + Codec's private data: size 2
+|  + Default duration: 00:00:00.021333333 (46.875 frames/fields per second for a video track)
 |  + Language (IETF BCP 47): ru
-|  + Name: Надписи
+|  + Name: Anzen & LeeAnnushka
+|  + Audio track
+|   + Sampling frequency: 48000
+|   + Channels: 2
 | + Track
-|  + Track number: 5 (track ID for mkvmerge & mkvextract: 4)
+|  + Track number: 4 (track ID for mkvmerge & mkvextract: 3)
 |  + Track UID: 4070051419648980389
 |  + Track type: subtitles
 |  + "Default track" flag: 0
@@ -82,6 +72,16 @@
 |  + Codec's private data: size 1802
 |  + Language (IETF BCP 47): ru
 |  + Name: Субтитры
+| + Track
+|  + Track number: 5 (track ID for mkvmerge & mkvextract: 4)
+|  + Track UID: 2408247198548403592
+|  + Track type: subtitles
+|  + "Lacing" flag: 0
+|  + Language: rus
+|  + Codec ID: S_TEXT/ASS
+|  + Codec's private data: size 1634
+|  + Language (IETF BCP 47): ru
+|  + Name: Надписи
 |+ EBML void: size 1168
 |+ Attachments
 | + Attached
