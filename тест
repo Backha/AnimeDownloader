@@ -1,0 +1,1 @@
+"C:\Program Files\MKVToolNix\mkvinfo.exe" "F:\Anime\AniLibria\YourFile.mkv" | findstr /C:"Track type: audio" /C:"Track type: subtitles"
