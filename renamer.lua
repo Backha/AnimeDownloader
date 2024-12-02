@@ -11,7 +11,7 @@ local allow_unofficial = true
 local foldername = anime.MainTitle or anime.preferredname
 
 -- Determine the anime name for the file name
-local animename = foldername
+local animename = anime.MainTitle or anime.preferredname
 
 -- Iterate through titles to find the short title and check if it's in Latin characters
 local titles = anime.titles or {}
