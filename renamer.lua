@@ -14,18 +14,16 @@ end
 
 -- Determine the anime name
 local animename = anime:getname(animelanguage) or anime.preferredname
-local shortname = anime:getshortname() -- Get short name if available
+local shortname = nil
 local synonym = nil
 
 -- If no short name, check for synonyms in Romaji or English
-if not shortname then
-  local synonyms = anime:getsynonyms({ Language.Romaji, Language.English })
-  if #synonyms > 0 then
-    for _, s in ipairs(synonyms) do
-      if #s < #animename then
-        synonym = s
-        break
-      end
+local synonyms = anime:getsynonyms({ Language.Romaji, Language.English })
+if #synonyms > 0 then
+  for _, s in ipairs(synonyms) do
+    if #s < #animename then
+      synonym = s
+      break
     end
   end
 end
