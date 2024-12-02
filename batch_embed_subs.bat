@@ -1,8 +1,11 @@
 @echo off
+:: Create the output directory if it doesn't exist
+if not exist output mkdir output
+
+:: Process all MP4 files in the folder
 for %%A in (*.mp4) do (
-    if not "%%~nA"=="The_Idolmaster_-_01" if not "%%~nA"=="The_Idolmaster_-_25" (
-        echo Processing "%%A"...
-        "C:\Program Files\MKVToolNix\mkvmerge.exe" -o "output\%%~nA_with_subs.mkv" "%%A" "%%~nA.ass"
-    )
+    echo Processing "%%A"...
+    "C:\Program Files\MKVToolNix\mkvmerge.exe" -o "output\%%~nA.mp4" "%%A" "%%~nA.ass"
 )
+
 pause
