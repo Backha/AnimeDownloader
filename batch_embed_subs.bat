@@ -1,65 +1,83 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Запрашиваем у пользователя язык субтитров
-set /p subtitle_lang=Введите язык субтитров (en/ru): 
+:: Ask the user for subtitle language
+set /p subtitle_lang=Enter subtitle language (en/ru): 
 
-:: Проверяем ввод пользователя
+:: Validate user input
 if not "!subtitle_lang!"=="en" if not "!subtitle_lang!"=="ru" (
-    echo Неверный ввод. Используйте "en" или "ru".
+    echo Invalid input. Use "en" or "ru".
     pause
     exit /b
 )
 
-:: Указываем путь к MKVToolNix
-set "mkvmerge_path=C:\Program Files\MKVToolNix\mkvmerge.exe"
-
-:: Создаём лог-файл
-set "log_file=process_log.txt"
-echo Старт обработки: %date% %time% > "%log_file%"
-
-:: Переходим в папку с видеофайлами
-cd /d "%~dp0"
-
-:: Обрабатываем каждый MKV-файл в папке
-for %%A in (*.mkv) do (
-    :: Определяем имя файла без расширения
-    set "filename=%%~nA"
-    set "subtitle_file=!filename!.!subtitle_lang!.ass"
-
-    :: Проверяем наличие субтитров
-    if exist "!subtitle_file!" (
-        echo Обработка файла: %%A с субтитрами: !subtitle_file! >> "%log_file%"
-        echo Обработка файла: %%A с субтитрами: !subtitle_file!
-
-        :: Создаём новый файл с добавленными субтитрами
-        "%mkvmerge_path%" -o "!filename!_with_subs.mkv" "%%A" "!subtitle_file!" >> "%log_file%" 2>&1
-
-        :: Проверяем успешность операции
-        if !errorlevel! equ 0 (
-            echo Успешно: %%A >> "%log_file%"
-            echo Успешно: %%A
-
-            :: Удаляем оригинальный файл
-            del "%%A"
-
-            :: Переименовываем новый файл в оригинальное имя
-            ren "!filename!_with_subs.mkv" "%%~nA%%~xA"
-
-            :: Удаляем файл субтитров
-            del "!subtitle_file!"
-        ) else (
-            echo Ошибка при обработке: %%A >> "%log_file%"
-            echo Ошибка при обработке: %%A
-        )
-    ) else (
-        echo Субтитры не найдены для: %%A >> "%log_file%"
-        echo Субтитры не найдены для: %%A
-    )
+:: Set track name based on language
+if "!subtitle_lang!"=="en" (
+    set "track_name=English"
+) else (
+    set "track_name=Русский"
 )
 
-echo Завершение обработки: %date% %time% >> "%log_file%"
-echo Завершение обработки: %date% %time%
+:: Specify the path to MKVToolNix
+set "mkvmerge_path=C:\Program Files\MKVToolNix\mkvmerge.exe"
+
+:: Create a log file
+set "log_file=process_log.txt"
+echo Script started on %date% at %time% > "%log_file%"
+
+:: Change to the folder with video files
+cd /d "%~dp0"
+echo Current folder: %cd% >> "%log_file%"
+
+:: Process each MKV file in the folder
+for %%A in (*.mkv) do (
+    :: Get the file name without extension
+    set "filename=%%~nA"
+
+    :: Find the first matching subtitle file
+    for %%S in ("!filename!.*.ass") do (
+        set "subtitle_file=%%S"
+        goto FoundSubtitle
+    )
+
+    :: No subtitle file found
+    echo No subtitles found for: %%A >> "%log_file%"
+    echo No subtitles found for: %%A
+    goto SkipFile
+
+:FoundSubtitle
+    echo Processing file: %%A with subtitles: !subtitle_file! >> "%log_file%"
+    echo Processing file: %%A with subtitles: !subtitle_file!
+
+    :: Create a new file with embedded subtitles and set track name
+    "%mkvmerge_path%" -o "!filename!_with_subs.mkv" "%%A" --track-name 0:"!track_name!" "!subtitle_file!" >> "%log_file%" 2>&1
+
+    :: Check if the operation was successful
+    if !errorlevel! equ 0 (
+        echo Success: %%A >> "%log_file%"
+        echo Success: %%A
+
+        :: Delete the original file
+        echo Deleting original file: %%A >> "%log_file%"
+        del "%%A"
+
+        :: Rename the new file to the original name
+        echo Renaming file: "!filename!_with_subs.mkv" to "%%~nA%%~xA" >> "%log_file%"
+        ren "!filename!_with_subs.mkv" "%%~nA%%~xA"
+
+        :: Delete the subtitle file
+        echo Deleting subtitle file: !subtitle_file! >> "%log_file%"
+        del "!subtitle_file!"
+    ) else (
+        echo Error processing file: %%A >> "%log_file%"
+        echo Error processing file: %%A
+    )
+
+:SkipFile
+)
+
+echo Script finished on %date% at %time% >> "%log_file%"
+echo Script finished on %date% at %time%
 
 endlocal
 pause
