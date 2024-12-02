@@ -7,7 +7,10 @@ video_dir = r"F:\Anime\ACCA 13-ku Kansatsu-ka (2017)"
 
 # Сначала скачиваем субтитры с помощью Subliminal
 def download_subtitles(video_dir):
-    os.system(f"subliminal download -l en -d \"{video_dir}\" \"{video_dir}\"")
+    command = [
+        "subliminal", "download", "-l", "en", "-d", video_dir, video_dir
+    ]
+    subprocess.run(command, check=True)
 
 # Встраиваем субтитры в видео с помощью FFmpeg
 def embed_subtitles_ffmpeg(video_path, subtitle_path):
