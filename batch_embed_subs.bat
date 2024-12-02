@@ -29,12 +29,21 @@ echo Script started on %date% at %time% > "%log_file%"
 cd /d "%~dp0"
 echo Current folder: %cd% >> "%log_file%"
 
+:: Debugging message
+echo Subtitle language: !subtitle_lang! >> "%log_file%"
+echo Track name set to: !track_name! >> "%log_file%"
+
 :: Process each MKV file in the folder
 for %%A in (*.mkv) do (
+    :: Debugging message
+    echo Found video file: %%A >> "%log_file%"
+    echo Found video file: %%A
+
     :: Get the file name without extension
     set "filename=%%~nA"
 
     :: Find the first matching subtitle file
+    set "subtitle_file="
     for %%S in ("!filename!.*.ass") do (
         set "subtitle_file=%%S"
         goto FoundSubtitle
