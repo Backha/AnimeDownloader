@@ -7,8 +7,11 @@ local episodelanguage = Language.English
 local spacechar = " "
 local allow_unofficial = true
 
--- Determine the anime name using titles from AniDB
-local animename = anime.MainTitle or anime.preferredname
+-- Determine the anime name using titles from AniDB for the folder name
+local foldername = anime.MainTitle or anime.preferredname
+
+-- Determine the anime name for the file name
+local animename = foldername
 
 -- Iterate through titles to find the short title and check if it's in Latin characters
 local titles = anime.titles or {}
@@ -20,7 +23,7 @@ for _, title in ipairs(titles) do
   end
 end
 
--- Use the short name if available
+-- Use the short name if available for the file name
 if shortname then
   animename = shortname
 end
@@ -56,10 +59,9 @@ if anime.airdate and anime.airdate.year then
   animeyear = anime.airdate.year
 end
 
--- Update the anime name with the year for the folder name if year is not already in the name
-local foldername = animename
-if animeyear ~= "" and not animename:find("%(%d+%)") then
-  foldername = animename .. " (" .. animeyear .. ")"
+-- Update the folder name with the year if year is not already in the name
+if animeyear ~= "" and not foldername:find("%(%d+%)") then
+  foldername = foldername .. " (" .. animeyear .. ")"
 end
 
 local namelist = {
