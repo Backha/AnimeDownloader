@@ -14,7 +14,7 @@ local all_titles = anime.AllTitles or ""
 local shortname = nil
 
 -- Split AllTitles by '|' and look for the shortest one
-for title in all_titles:gmatch("[^\|]+") do
+for title in all_titles:gmatch("[^|]+") do
   if not shortname or #title < #shortname then
     shortname = title
   end
@@ -50,14 +50,24 @@ if anime.type == AnimeType.Movie then
   episodename = ""
 end
 
--- Safely determine the year from BeginYear
-local animeyear = anime.BeginYear or ""
+-- Safely determine the year from AirDate
+local animeyear = ""
+if anime.airdate and anime.airdate.year then
+  animeyear = anime.airdate.year
+end
+
+-- Update the anime name with the year for the folder name
+local foldername = animename
+if animeyear ~= "" then
+  foldername = animename .. " (" .. animeyear .. ")"
+end
 
 local namelist = {
   animename:truncate(maxnamelen),
+  "-",
   episodenumber,
   episodename:truncate(maxnamelen),
 }
 
 filename = table.concat(namelist, " "):cleanspaces(spacechar)
-subfolder = { animename .. (animeyear ~= "" and " (" .. animeyear .. ")" or "") }
+subfolder = { foldername }
