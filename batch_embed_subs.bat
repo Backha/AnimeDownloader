@@ -29,58 +29,28 @@ echo Script started on %date% at %time% > "%log_file%"
 cd /d "%~dp0"
 echo Current folder: %cd% >> "%log_file%"
 
-:: Debugging message
-echo Subtitle language: !subtitle_lang! >> "%log_file%"
-echo Track name set to: !track_name! >> "%log_file%"
-
-:: Process each MKV file in the folder
+:: Check for MKV files
 for %%A in (*.mkv) do (
-    :: Debugging message
     echo Found video file: %%A >> "%log_file%"
     echo Found video file: %%A
 
-    :: Get the file name without extension
-    set "filename=%%~nA"
-
-    :: Find the first matching subtitle file
+    :: Check for matching subtitle file
     set "subtitle_file="
-    for %%S in ("!filename!.*.ass") do (
+    for %%S in ("%%~nA*.ass") do (
         set "subtitle_file=%%S"
-        goto FoundSubtitle
+        goto ProcessFile
     )
 
-    :: No subtitle file found
     echo No subtitles found for: %%A >> "%log_file%"
     echo No subtitles found for: %%A
     goto SkipFile
 
-:FoundSubtitle
+:ProcessFile
     echo Processing file: %%A with subtitles: !subtitle_file! >> "%log_file%"
     echo Processing file: %%A with subtitles: !subtitle_file!
 
-    :: Create a new file with embedded subtitles and set track name
-    "%mkvmerge_path%" -o "!filename!_with_subs.mkv" "%%A" --track-name 0:"!track_name!" "!subtitle_file!" >> "%log_file%" 2>&1
-
-    :: Check if the operation was successful
-    if !errorlevel! equ 0 (
-        echo Success: %%A >> "%log_file%"
-        echo Success: %%A
-
-        :: Delete the original file
-        echo Deleting original file: %%A >> "%log_file%"
-        del "%%A"
-
-        :: Rename the new file to the original name
-        echo Renaming file: "!filename!_with_subs.mkv" to "%%~nA%%~xA" >> "%log_file%"
-        ren "!filename!_with_subs.mkv" "%%~nA%%~xA"
-
-        :: Delete the subtitle file
-        echo Deleting subtitle file: !subtitle_file! >> "%log_file%"
-        del "!subtitle_file!"
-    ) else (
-        echo Error processing file: %%A >> "%log_file%"
-        echo Error processing file: %%A
-    )
+    :: Dummy operation for debugging
+    echo mkvmerge would run here on %%A and !subtitle_file! >> "%log_file%"
 
 :SkipFile
 )
