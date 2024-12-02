@@ -1,45 +1,65 @@
 @echo off
 setlocal enabledelayedexpansion
 
-REM Запросить у пользователя язык субтитров
-echo Введите язык субтитров (например, en или ru):
-set /p lang=
+:: Запрашиваем у пользователя язык субтитров
+set /p subtitle_lang=Введите язык субтитров (en/ru): 
 
-REM Путь к директории с видео и субтитрами - текущая директория
-set "video_dir=%cd%"
+:: Проверяем ввод пользователя
+if not "!subtitle_lang!"=="en" if not "!subtitle_lang!"=="ru" (
+    echo Неверный ввод. Используйте "en" или "ru".
+    pause
+    exit /b
+)
 
-REM Перейти в текущую папку с видеофайлами и субтитрами
-cd /d "%video_dir%"
+:: Указываем путь к MKVToolNix
+set "mkvmerge_path=C:\Program Files\MKVToolNix\mkvmerge.exe"
 
-REM Ищем все файлы MKV в директории
-for %%f in (*.mkv) do (
-    REM Ищем соответствующий файл субтитров
-    set "subtitle_file=%%~nf.%lang%.srt"
-    if not exist "!subtitle_file!" set "subtitle_file=%%~nf.%lang%.ass"
+:: Создаём лог-файл
+set "log_file=process_log.txt"
+echo Старт обработки: %date% %time% > "%log_file%"
+
+:: Переходим в папку с видеофайлами
+cd /d "%~dp0"
+
+:: Обрабатываем каждый MKV-файл в папке
+for %%A in (*.mkv) do (
+    :: Определяем имя файла без расширения
+    set "filename=%%~nA"
+    set "subtitle_file=!filename!.!subtitle_lang!.ass"
+
+    :: Проверяем наличие субтитров
     if exist "!subtitle_file!" (
-        REM Создаем имя для временного выходного файла
-        set "output_file=%%~nf_with_subs.mkv"
-        
-        REM Встраиваем субтитры в видео с помощью FFmpeg
-        ffmpeg -i "%%f" -i "!subtitle_file!" -c:v copy -c:a copy -c:s mov_text "!output_file!"
-        
-        REM Проверяем успешность встраивания
-        if exist "!output_file!" (
-            REM Удаляем старый файл и переименовываем новый файл в старый
-            del "%%f"
-            ren "!output_file!" "%%~nxf"
-            
-            REM Удаляем файл субтитров после успешного встраивания
+        echo Обработка файла: %%A с субтитрами: !subtitle_file! >> "%log_file%"
+        echo Обработка файла: %%A с субтитрами: !subtitle_file!
+
+        :: Создаём новый файл с добавленными субтитрами
+        "%mkvmerge_path%" -o "!filename!_with_subs.mkv" "%%A" "!subtitle_file!" >> "%log_file%" 2>&1
+
+        :: Проверяем успешность операции
+        if !errorlevel! equ 0 (
+            echo Успешно: %%A >> "%log_file%"
+            echo Успешно: %%A
+
+            :: Удаляем оригинальный файл
+            del "%%A"
+
+            :: Переименовываем новый файл в оригинальное имя
+            ren "!filename!_with_subs.mkv" "%%~nA%%~xA"
+
+            :: Удаляем файл субтитров
             del "!subtitle_file!"
-            
-            echo Субтитры успешно встроены в %%f
         ) else (
-            echo Ошибка при встраивании субтитров в %%f
+            echo Ошибка при обработке: %%A >> "%log_file%"
+            echo Ошибка при обработке: %%A
         )
     ) else (
-        echo Субтитры для %%f не найдены, пропускаем.
+        echo Субтитры не найдены для: %%A >> "%log_file%"
+        echo Субтитры не найдены для: %%A
     )
 )
+
+echo Завершение обработки: %date% %time% >> "%log_file%"
+echo Завершение обработки: %date% %time%
 
 endlocal
 pause
