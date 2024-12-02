@@ -10,11 +10,11 @@ local allow_unofficial = true
 -- Determine the anime name using titles from AniDB
 local animename = anime.MainTitle or anime.preferredname
 
--- Iterate through titles to find the short title and check if it's in Latin characters
+-- Iterate through titles to find the short title in English
 local titles = anime:gettitles() or {}
 local shortname = nil
 for _, title in ipairs(titles) do
-  if title.type == "Short" and title.name:match("%a") then
+  if title.type == "Short" and title.language == Language.English then
     shortname = title.name
     break
   end
