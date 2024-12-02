@@ -6,23 +6,20 @@ local animelanguage = Language.English
 local episodelanguage = Language.English
 local spacechar = " "
 
--- Determine the anime name using gettitle
-local animename = anime:gettitle(animelanguage, TitleType.Main) or anime:gettitle(animelanguage, TitleType.Official) or anime.preferredname
-local synonym = nil
+-- Determine the anime name using titles
+local titles = anime.titles
+local shortname = nil
 
--- Check for synonyms in Romaji or English
-local synonyms = anime:getsynonyms({ Language.Romaji, Language.English })
-if #synonyms > 0 then
-  for _, s in ipairs(synonyms) do
-    if #s < #animename then
-      synonym = s
-      break
-    end
+-- Search for a short title
+for _, title in ipairs(titles) do
+  if title.type == TitleType.Short then
+    shortname = title.name
+    break
   end
 end
 
--- Use the final name for anime
-animename = synonym or animename
+-- Use the short name if available, otherwise use the main or preferred name
+local animename = shortname or anime:getname(animelanguage) or anime.preferredname
 
 local episodename = ""
 local engepname = episode:getname(Language.English) or ""
