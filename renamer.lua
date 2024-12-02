@@ -5,23 +5,27 @@ local maxnamelen = 35
 local animelanguage = Language.English
 local episodelanguage = Language.English
 local spacechar = " "
+local allow_unofficial = true
 
 -- Determine the anime name using titles from AniDB
 local animename = anime.MainTitle or anime.preferredname
 
--- Search for a short title from AllTitles
+-- Search for a short title from AllTitles if allow_unofficial is true
 local all_titles = anime.AllTitles or ""
 local shortname = nil
 
 -- Split AllTitles by '|' and look for the shortest one
-for title in all_titles:gmatch("[^|]+") do
-  if not shortname or #title < #shortname then
-    shortname = title
+if allow_unofficial then
+  for title in all_titles:gmatch("[^|]+") do
+    if title:match("Short") then
+      shortname = title
+      break
+    end
   end
 end
 
--- Use the short name if available and shorter, otherwise use the main or preferred name
-if shortname and #shortname < #animename then
+-- Use the short name if available
+if shortname then
   animename = shortname
 end
 
@@ -56,9 +60,9 @@ if anime.airdate and anime.airdate.year then
   animeyear = anime.airdate.year
 end
 
--- Update the anime name with the year for the folder name
+-- Update the anime name with the year for the folder name if year is not already in the name
 local foldername = animename
-if animeyear ~= "" then
+if animeyear ~= "" and not animename:find("%(%d+%)") then
   foldername = animename .. " (" .. animeyear .. ")"
 end
 
