@@ -6,20 +6,24 @@ local animelanguage = Language.English
 local episodelanguage = Language.English
 local spacechar = " "
 
--- Determine the anime name using titles
-local titles = anime.titles
+-- Determine the anime name using titles from AniDB
+local animename = anime.MainTitle or anime.preferredname
+
+-- Search for a short title from AllTitles
+local all_titles = anime.AllTitles or ""
 local shortname = nil
 
--- Search for a short title
-for _, title in ipairs(titles) do
-  if title.type == TitleType.Short then
-    shortname = title.name
-    break
+-- Split AllTitles by '|' and look for the shortest one
+for title in all_titles:gmatch("[^\|]+") do
+  if not shortname or #title < #shortname then
+    shortname = title
   end
 end
 
--- Use the short name if available, otherwise use the main or preferred name
-local animename = shortname or anime:getname(animelanguage) or anime.preferredname
+-- Use the short name if available and shorter, otherwise use the main or preferred name
+if shortname and #shortname < #animename then
+  animename = shortname
+end
 
 local episodename = ""
 local engepname = episode:getname(Language.English) or ""
@@ -46,6 +50,9 @@ if anime.type == AnimeType.Movie then
   episodename = ""
 end
 
+-- Safely determine the year from BeginYear
+local animeyear = anime.BeginYear or ""
+
 local namelist = {
   animename:truncate(maxnamelen),
   episodenumber,
@@ -53,4 +60,4 @@ local namelist = {
 }
 
 filename = table.concat(namelist, " "):cleanspaces(spacechar)
-subfolder = { animename .. " (" .. anime.year .. ")" }
+subfolder = { animename .. (animeyear ~= "" and " (" .. animeyear .. ")" or "") }
