@@ -10,12 +10,11 @@ local allow_unofficial = true
 -- Determine the anime name using titles from AniDB
 local animename = anime.MainTitle or anime.preferredname
 
--- Use anime:getname() to find the short title
-local titles = anime:getname() or {}
+-- Iterate through titles to find the short title
+local titles = anime.titles or {}
 local shortname = nil
-
 for _, title in ipairs(titles) do
-  if title.type == "short" then
+  if title.type == "Short" then
     shortname = title.name
     break
   end
