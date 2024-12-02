@@ -11,12 +11,32 @@ local group = ""
 if file.anidb and file.anidb.releasegroup then
   group = "[" .. (file.anidb.releasegroup.shortname or file.anidb.releasegroup.name) .. "]"
 end
+
+-- Determine the anime name
 local animename = anime:getname(animelanguage) or anime.preferredname
+local shortname = anime:getshortname() -- Get short name if available
+local synonym = nil
+
+-- If no short name, check for synonyms in Romaji or English
+if not shortname then
+  local synonyms = anime:getsynonyms({ Language.Romaji, Language.English })
+  if #synonyms > 0 then
+    for _, s in ipairs(synonyms) do
+      if #s < #animename then
+        synonym = s
+        break
+      end
+    end
+  end
+end
+
+-- Use the final name for anime
+animename = shortname or synonym or animename
 
 local episodename = ""
 local engepname = episode:getname(Language.English) or ""
 local episodenumber = ""
--- If the episode is not a complete movie then add an episode number/name
+-- If the anime is not a movie, add an episode number/name
 if anime.type ~= AnimeType.Movie or not engepname:find("^Complete Movie") then
   local fileversion = ""
   if (file.anidb and file.anidb.version > 1) then
@@ -31,6 +51,11 @@ if anime.type ~= AnimeType.Movie or not engepname:find("^Complete Movie") then
   if #episodes == 1 and not engepname:find("^Episode") and not engepname:find("^OVA") then
     episodename = episode:getname(episodelanguage) or ""
   end
+end
+
+-- If it's a movie, use the anime name as the episode name
+if anime.type == AnimeType.Movie then
+  episodename = ""
 end
 
 local res = file.media.video.res or ""
@@ -71,7 +96,6 @@ elseif nonnativedublangs:count() > 0 then
   langtag = "[DUB]"
 end
 
-
 local crchash = ""
 -- CRC can be null if disabled in Shoko settings, so need to check it
 if file.hashes.crc then
@@ -92,4 +116,4 @@ local namelist = {
 }
 
 filename = table.concat(namelist, " "):cleanspaces(spacechar)
-subfolder = { animename }
+subfolder = { animename .. " (" .. anime.year .. ")" }
