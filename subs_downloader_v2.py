@@ -1,11 +1,7 @@
 import os
 import subprocess
 from subliminal import download_best_subtitles, save_subtitles, scan_video
-from subliminal.api import set_api_key
 from babelfish import Language
-
-# Ваш API-ключ OpenSubtitles
-set_api_key('uyBy52nhzn5D2C1W2W9kQJsTZVU9X4Kz')
 
 # Папка с аниме
 anime_folder = 'F:\\Anime'
